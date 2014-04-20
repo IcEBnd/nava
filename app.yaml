@@ -1,0 +1,16 @@
+application: neat-graph-530
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /nava/assets
+  static_dir: assets
+
+- url: .*
+  script: myproject.wsgi.application
+
+libraries:
+- name: django
+  version: 1.5
